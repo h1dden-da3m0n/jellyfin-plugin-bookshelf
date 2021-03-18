@@ -2,8 +2,7 @@
 <h3 align="center">Part of the <a href="https://jellyfin.org/">Jellyfin Project</a></h3>
 
 <p align="center">
-
-<img alt="Logo Banner" src="https://raw.githubusercontent.com/jellyfin/jellyfin-ux/master/branding/SVG/banner-logo-solid.svg?sanitize=true"/>
+<img alt="Plugin Banner" src="https://raw.githubusercontent.com/jellyfin/jellyfin-ux/master/plugins/SVG/jellyfin-plugin-bookshelf.svg?sanitize=true"/>
 <br/>
 <br/>
 <a href="https://github.com/jellyfin/jellyfin-plugin-bookshelf/actions?query=workflow%3A%22Test+Build+Plugin%22">
@@ -18,7 +17,6 @@
 </p>
 
 ## About
-
 The Jellyfin Bookshelf plugin enables the collection of eBooks & AudioBooks, with the latter being able to be played through Jellyfin. This plugin uses Google Books as a Metadata provider.
 
 Supported eBook file types:
@@ -29,16 +27,13 @@ Supported eBook file types:
 - cbz
 - cbr
 
-## Build & Installation Process
+## Build Process
 
-1. Clone this repository
+1. To build and run this plugin you will need [jprm](https://github.com/oddstr13/jellyfin-plugin-repository-manager) as well as [.Net Core 5.x](https://dotnet.microsoft.com/download/dotnet/5.0).
 
-2. Ensure you have .NET Core SDK setup and installed
+2. Run the build via `jprm`
+  ```
+  jprm plugin build --output=../artifacts
+  ```
 
-3. Build the plugin with following command:
-
-```
-dotnet publish --configuration Release --output bin
-```
-
-4. Place the resulting `Jellyfin.Plugin.Bookshelf.dll` file in a folder called `plugins/` inside your Jellyfin installation / data directory.
+3. Place the resulting file in the `plugins` folder of your JF install
